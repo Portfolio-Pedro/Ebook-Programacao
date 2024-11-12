@@ -141,15 +141,15 @@ background: var(--primary-color);
 
 /* Estilização para a seção de oferta */
 #oferta.hero {
-    background-color: #000000; /* Fundo vibrante */
-    color: #000000; /* Texto branco */
+    background-color: #fff1f1; /* Fundo vibrante */
+    color: #ffffff; /* Texto branco */
     padding: 50px 0;
     text-align: center;
-    background-image: linear-gradient(135deg, #000000 0%, #000000 100%); /* Gradiente de fundo */
+    background-image: linear-gradient(135deg, #000000 0%, #000000 100%);
 }
 
 #oferta .container {
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -175,6 +175,50 @@ background: var(--primary-color);
     color: #000000; /* Cor do texto do botão */
     background-color: #ffffff; /* Fundo branco para o botão */
     padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#oferta .cta-button:hover {
+    background-color: #ce0000c6; /* Fundo muda na interação */
+    color: #ffffff; /* Texto branco na interação */
+}
+
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    #oferta h1 {
+        font-size: 1.8em; /* Tamanho do título menor em telas pequenas */
+    }
+
+    #oferta p {
+        font-size: 1em; /* Tamanho do texto reduzido em telas menores */
+    }
+
+    #oferta .cta-button {
+        font-size: 1em;
+        padding: 12px 25px; /* Botão ligeiramente menor em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    #oferta.hero {
+        padding: 30px 0; /* Reduz o padding da seção em telas muito pequenas */
+    }
+
+    #oferta h1 {
+        font-size: 1.5em;
+    }
+
+    #oferta p {
+        font-size: 0.9em;
+    }
+
+    #oferta .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }
 
 
