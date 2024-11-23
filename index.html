@@ -1,16 +1,13 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Tecnológica</title>
+    <title>Desvende a Programação do Zero</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="section hero">
         <div class="container">
             <h1>Desvende a Programação do Zero</h1>
             <p>O Guia Essencial para Transformar Ideias em Código</p>
@@ -18,99 +15,98 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="beneficio" class="benefits">
+    <section id="beneficio" class="section benefits">
         <div class="container">
             <h2>Benefícios Comprovados</h2>
             <div class="benefits-grid">
-                <div class="benefit-card"><i class="fas fa-check"></i><p>Domine a Lógica de Resolução de Problemas</p></div>
-                <div class="benefit-card"><i class="fas fa-check"></i><p>Aumente Suas Oportunidades de Carreira</p></div>
-                <div class="benefit-card"><i class="fas fa-check"></i><p>Desenvolva Projetos Reais e Práticos</p></div>
-                <div class="benefit-card"><i class="fas fa-check"></i><p>Adquira Habilidades Valorizadas no Mercado</p></div>
-                <div class="benefit-card"><i class="fas fa-check"></i><p>Aprenda a Criar Soluções Inovadoras</p></div>
+                <div class="benefit-card">
+                    Domine a Lógica de Resolução de Problemas
+                </div>
+                <div class="benefit-card">
+                    Aumente Suas Oportunidades de Carreira
+                </div>
+                <div class="benefit-card">
+                    Desenvolva Projetos Reais e Práticos
+                </div>
+                <div class="benefit-card">
+                    Adquira Habilidades Valorizadas no Mercado
+                </div>
+                <div class="benefit-card">
+                    Aprenda a Criar Soluções Inovadoras
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="oferta" class="hero">
+    <section id="oferta" class="section hero">
         <div class="container">
             <h1>OFERTA POR TEMPO LIMITADO</h1>
-            <p>Garanta agora seu ebook </p>
+            <p>Garanta agora seu ebook</p>
             <a href="#compra" class="cta-button">COMPRAR AGORA</a>
         </div>
     </section>
 
-    <!-- Ebook Preview -->
-    <section id="previa ebook" class="ebook">
+    <section id="previa" class="section ebook">
         <div class="container">
             <div class="ebook-content">
                 <div class="ebook-text">
                     <h2>E-book</h2>
-                    <p>Este eBook é um guia completo para iniciantes em programação, oferecendo uma introdução clara e prática aos conceitos fundamentais. Do básico em lógica de programação ao desenvolvimento de algoritmos e estruturas de dados, você aprenderá tudo o que precisa para começar a programar.</p>
+                    <p>Este eBook é um guia completo para iniciantes em programação, oferecendo
+                    uma introdução clara e prática aos conceitos fundamentais. Do básico em
+                    lógica de programação ao desenvolvimento de algoritmos e estruturas de
+                    dados, você aprenderá tudo o que precisa para começar a programar.</p>
                 </div>
                 <div class="ebook-image">
-                    <img src="img/Prévia ebook.png" alt="Ebook Preview">
+                    <img src="img/Prévia ebook.png" alt="Prévia do Ebook">
                     <a href="#compra" class="botao-previa">Comprar Agora</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Personal Story -->
-    <section id="historia" class="story">
+    <section id="historia" class="section story">
         <div class="container">
             <div class="story-content">
                 <h2>Minha História na Programação</h2>
-                <p>Desde pequeno, sempre tive uma curiosidade enorme por computadores e o desejo de entender como eles funcionam...</p>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
+                <p>Desde pequeno, sempre tive uma curiosidade enorme por computadores e o
+                desejo de entender como eles funcionam...</p>
+                <div class="rating"></div>
             </div>
         </div>
     </section>
 
-    <!-- Purchase Section -->
-    <section id="compra" class="purchase">
+    <section id="compra" class="section purchase">
         <div class="container">
             <h2>Escolha Seu Pacote</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Ebook Guia para iniciantes em Programação</h3>
-                    <h4>POR APENAS R$57,90 </h4>
+                    <h4>POR APENAS R$57,90</h4>
                     <a href="https://pay.kiwify.com.br/gLO3XfK" class="botao-compra">Comprar Agora</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <body>
-        <!-- Container do Chatbot -->
-        <div class="chatbot-container">
-            <button onclick="toggleChat()" class="chat-button">💬</button>
-            
-            <div id="chatWindow" class="chat-window">
-                <div class="chat-header">
-                    <span>Chat de Atendimento</span>
-                    <button onclick="toggleChat()" class="close-button">✕</button>
-                </div>
-                
-                <div id="chatMessages" class="chat-messages">
-                    <div class="message bot-message">
-                        Olá! Como posso ajudar?
-                    </div>
-                </div>
-                
-                <div class="chat-input">
-                    <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
-                    <button onclick="sendMessage()">Enviar</button>
+    <div class="chatbot-container">
+        💬
+        <div id="chatWindow" class="chat-window">
+            <div class="chat-header">
+                Chat de Atendimento
+                <span class="close-button">✕</span>
+            </div>
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot-message">
+                    Olá! Como posso ajudar?
                 </div>
             </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
         </div>
-    
-        <script src="script.js"></script>
-    </body>
-    </html>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
