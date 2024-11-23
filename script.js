@@ -163,6 +163,7 @@ function getBotResponse(message) {
     else {
         return 'Obrigado esperamos que goste do nosso ebook';
     }
+    
 }
 
 // Permite enviar mensagem com Enter
