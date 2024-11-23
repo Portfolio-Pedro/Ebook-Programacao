@@ -86,3 +86,80 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+function toggleChat() {
+    var chatWindow = document.getElementById('chatWindow');
+    chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+}
+
+function sendMessage() {
+    var input = document.getElementById('messageInput');
+    var message = input.value.trim();
+    
+    if (message === '') return;
+
+    // Adiciona mensagem do usuário
+    addMessage(message, 'user-message');
+    input.value = '';
+
+    // Simula resposta do bot após 1 segundo
+    setTimeout(function() {
+        var response = getBotResponse(message);
+        addMessage(response, 'bot-message');
+    }, 1000);
+}
+
+function addMessage(text, className) {
+    var messagesDiv = document.getElementById('chatMessages');
+    var messageDiv = document.createElement('div');
+    messageDiv.className = 'message ' + className;
+    messageDiv.textContent = text;
+    messagesDiv.appendChild(messageDiv);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function getBotResponse(message) {
+    // Converte mensagem para minúsculas para facilitar a comparação
+    message = message.toLowerCase();
+
+    // Respostas básicas do bot
+    if (message.includes('olá') || message.includes('oi')) {
+        return 'Olá! Como posso ajudar você hoje?';
+    }
+    
+    else if (message.includes('preço') || message.includes('valor')) {
+        return 'O eBook custa R$57,90 e oferece um aprendizado completo em programação, com foco em lógica, algoritmos e estruturas de dados. ';
+    }
+    
+    else if (message.includes('aprendizado') || message.includes('sobre') || message.includes('o que')) {
+        return 'Oferecemos um eBook completo para quem quer começar na programação, aprendendo desde a lógica até as práticas do mercado';
+    }
+   
+    else if (message.includes('contato') || message.includes('saber mais')) {
+        return 'Você pode nos contatar pelo nosso email ebookiniciantesprogramacao@gmail.com ';
+    }
+    
+    else if (message.includes('indicado') || message.includes('iniciante') || message.includes('publico') || message.includes('público')){
+        return 'Esse ebook é perfeito para quem está começando, oferecendo uma base sólida e fácil de entender';
+    }
+
+    else if (message.includes('conteudo') || message.includes('conteúdo')) {
+        return 'O eBook cobre fundamentos essenciais da programação, incluindo lógica, algoritmos e estruturas de dados, com exercícios práticos.';
+    }
+   
+    else if (message.includes('formato') || message.includes('acesso')) {
+        return 'O eBook será enviado ao EMAIL cadastrado por você na hora de efetuar a compra com acesso imediato , em formato de PDF';
+    }
+
+    else {
+        return 'Obrigado esperamos que goste do nosso ebook';
+    }
+}
+
+// Permite enviar mensagem com Enter
+document.getElementById('messageInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
