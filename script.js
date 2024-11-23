@@ -152,6 +152,14 @@ function getBotResponse(message) {
         return 'O eBook será enviado ao EMAIL cadastrado por você na hora de efetuar a compra com acesso imediato , em formato de PDF';
     }
 
+    else if (message.includes('vale') || message.includes('bom')) {
+     return 'O eBook é muito valioso se você é um iniciante que deseja aprender muito sobre programação';
+    }
+
+         else if (message.includes('garantia') || message.includes('devolução')) {
+        return 'Após a compra você tem 7 DIAS DE GARANTIA e se por acaso você queira devolver , você recebe seu dinheiro de volta na hora';
+    }
+             
     else {
         return 'Obrigado esperamos que goste do nosso ebook';
     }
