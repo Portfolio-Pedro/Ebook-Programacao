@@ -89,13 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function toggleChat() {
-    var chatWindow = document.getElementById('chatWindow');
-    chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+    const chatWindow = document.getElementById('chatWindow');
+    const currentDisplay = chatWindow.style.display;
+    chatWindow.style.display = currentDisplay === 'none' ? 'block' : 'none';
 }
 
 function sendMessage() {
-    var input = document.getElementById('messageInput');
-    var message = input.value.trim();
+    const input = document.getElementById('messageInput');
+    const message = input.value.trim();
     
     if (message === '') return;
 
@@ -105,19 +106,20 @@ function sendMessage() {
 
     // Simula resposta do bot após 1 segundo
     setTimeout(function() {
-        var response = getBotResponse(message);
+        const response = getBotResponse(message);
         addMessage(response, 'bot-message');
     }, 1000);
 }
 
 function addMessage(text, className) {
-    var messagesDiv = document.getElementById('chatMessages');
-    var messageDiv = document.createElement('div');
+    const messagesDiv = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
     messageDiv.className = 'message ' + className;
     messageDiv.textContent = text;
     messagesDiv.appendChild(messageDiv);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
+
 
 function getBotResponse(message) {
     // Converte mensagem para minúsculas para facilitar a comparação
@@ -171,4 +173,5 @@ document.getElementById('messageInput').addEventListener('keypress', function(e)
     if (e.key === 'Enter') {
         sendMessage();
     }
+
 });
